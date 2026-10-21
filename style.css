@@ -1,0 +1,404 @@
+:root {
+    --background: #FAF8F4;
+    --white: #FFFFFF;
+    --beige: #F1ECE5;
+    --blue: #E9F2F8;
+    --lavender: #EDE8F5;
+    --text: #151515;
+    --border: #E5DED5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 35px 25px;
+    min-height: 100vh;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--text);
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            #E9F2F8 0%,
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            #EDE8F5 0%,
+            transparent 30%
+        ),
+        var(--background);
+}
+
+/* HEADINGS */
+
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 45px 0 15px;
+    letter-spacing: 0.3px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--text);
+    margin-top: 25px;
+}
+
+h3 {
+    font-size: 23px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+p {
+    font-size: 19px;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    max-width: 1150px;
+    margin: 0 auto 45px;
+    padding: 18px 20px;
+
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    box-shadow: 0 5px 25px rgba(40, 35, 30, 0.04);
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 10px 19px;
+
+    background-color: #F8F6F2;
+    color: var(--text);
+
+    border: 1px solid #E8E2DA;
+    border-radius: 9px;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.navbar a:nth-child(3n + 1) {
+    background-color: var(--blue);
+    border-color: #D9E8F1;
+}
+
+.navbar a:nth-child(3n + 2) {
+    background-color: var(--lavender);
+    border-color: #E3DCEC;
+}
+
+.navbar a:hover {
+    background-color: #DCEAF4;
+    color: #000000;
+    border-color: #B9D2E2;
+    transform: translateY(-2px);
+}
+
+/* BUTTONS */
+
+button {
+    padding: 12px 25px;
+    margin: 8px;
+
+    background-color: var(--blue);
+    color: #151515;
+
+    border: 1px solid #C8DCE9;
+    border-radius: 10px;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 19px;
+    font-weight: normal;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background-color: #D4E7F3;
+    border-color: #AFCBDE;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:nth-of-type(even) {
+    background-color: var(--lavender);
+    border-color: #DCD1EC;
+}
+
+button:nth-of-type(even):hover {
+    background-color: #DDD4EC;
+}
+
+/* INPUTS */
+
+input[type="text"],
+input[type="number"] {
+    padding: 13px 18px;
+    margin: 8px;
+
+    background: #FFFFFF;
+    color: #151515;
+
+    border: 1px solid #D8D2CA;
+    border-radius: 10px;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 19px;
+
+    outline: none;
+    max-width: 100%;
+
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    border-color: #B8CFE0;
+    box-shadow: 0 0 0 3px rgba(207, 227, 242, 0.45);
+}
+
+input::placeholder {
+    color: #777777;
+}
+
+/* TASK 2 */
+
+#message {
+    max-width: 550px;
+    margin: 25px auto;
+    padding: 20px;
+
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    font-size: 21px;
+}
+
+/* TASK 3 */
+
+#myBox {
+    margin: 25px auto;
+    max-width: 100%;
+    border: 1px solid #D9E2E8;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(40, 35, 30, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+#myText {
+    color: #151515;
+}
+
+/* TASK 4 */
+
+#itemList {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 0;
+    list-style: none;
+}
+
+#itemList li {
+    background: #FFFFFF;
+
+    margin: 12px 0;
+    padding: 15px 20px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    font-size: 19px;
+    color: #151515;
+}
+
+/* TASK 5 */
+
+#colorBox {
+    margin: 30px auto;
+    max-width: 100%;
+
+    border: 1px solid #D7E3EC;
+    border-radius: 15px;
+
+    color: #151515;
+    font-size: 22px;
+
+    box-shadow: 0 5px 20px rgba(40, 35, 30, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+/* TASK 6 */
+
+#output {
+    font-size: 24px;
+    font-style: italic;
+    color: #151515;
+    overflow-wrap: anywhere;
+}
+
+/* TASK 7 */
+
+#result {
+    display: inline-block;
+    min-width: 50px;
+    padding: 5px 12px;
+
+    background-color: var(--lavender);
+    border-radius: 8px;
+
+    font-size: 27px;
+    color: #151515;
+}
+
+/* TASK 8 - TO-DO APP */
+
+.container {
+    max-width: 600px;
+    margin: 35px auto;
+    padding: 35px;
+
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px rgba(40, 35, 30, 0.05);
+}
+
+.container h1 {
+    margin-top: 0;
+    font-size: 34px;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 18px;
+    margin: 12px 0;
+
+    background: #F8F6F2;
+    border: 1px solid #E6E0D8;
+    border-radius: 10px;
+}
+
+#taskList li:nth-child(even) {
+    background: #F3F1F8;
+}
+
+#taskList label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 19px;
+    color: #151515;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+#taskList input[type="checkbox"] {
+    accent-color: #A7C8DD;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+#taskList button {
+    background-color: var(--lavender);
+    color: #151515;
+    border: 1px solid #D9CFE7;
+
+    padding: 8px 15px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+#taskList button:hover {
+    background-color: #DDD5EC;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #777777;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+    body {
+        padding: 18px 12px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .navbar {
+        padding: 12px;
+        gap: 7px;
+        margin-bottom: 25px;
+    }
+
+    .navbar a {
+        padding: 9px 13px;
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 22px 15px;
+    }
+
+    button {
+        font-size: 17px;
+        padding: 10px 16px;
+    }
+
+    #taskList li {
+        padding: 12px;
+    }
+}
